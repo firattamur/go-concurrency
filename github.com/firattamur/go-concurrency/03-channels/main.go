@@ -59,6 +59,7 @@ func repeat(word string, pipe chan string) {
 	}
 
 	// close the channel to prevent deadlock in the code
+	// be carefull sender should close the channel not the receiver
 	close(pipe)
 
 }
